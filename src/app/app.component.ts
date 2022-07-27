@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'Client.UI';
   custs: Client[] = [];
   custToEdit?:Client;
+  columnsToDisplay = ['firstName', 'lastName', 'email', 'phoneNumber', 'birthDate', 'button'];
 
   constructor(private clientService: ClientService) {}
 

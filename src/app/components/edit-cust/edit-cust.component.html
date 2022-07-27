@@ -1,28 +1,40 @@
 <div *ngIf="cust">
-    <h2>{{cust.firstName}}</h2>
+    <mat-card>
 <div>
-First Name:
-    <input [(ngModel)]="cust.firstName" placeholder="First Name"/>
+    <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+    <input matInput [(ngModel)]="cust.firstName" placeholder="First Name"/>
+    </mat-form-field>
 </div>
 <div>
-Last Name:
-<input [(ngModel)]="cust.lastName" placeholder="Last Name"/>
+    <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+    <input matInput [(ngModel)]="cust.lastName" placeholder="Last Name"/>
+    </mat-form-field>
 </div>
 <div>
-Email:
-<input [(ngModel)]="cust.email" placeholder="Email"/>
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="cust.email" placeholder="Email"/>
+    </mat-form-field>
 </div>
 <div>
-Phone Number:
-<input [(ngModel)]="cust.phoneNumber" placeholder="Phone Number"/>
+    <mat-form-field appearance="fill">
+        <mat-label>Phone Number</mat-label>
+    <input matInput [(ngModel)]="cust.phoneNumber" placeholder="Phone Number"/>
+    </mat-form-field>
+
 </div>
 <div>
-Birth Date:
-<input [(ngModel)]="cust.birthDate" placeholder="Birth Date"/>
+    <mat-form-field appearance="fill">
+        <mat-label>Birth Date</mat-label>
+    <input matInput [(ngModel)]="cust.birthDate" placeholder="Birthdate"/>
+    </mat-form-field>
 </div>
-<button (click)="updateCust(cust)" *ngIf="cust.id">Save</button>
-<button (click)="deleteCust(cust)" *ngIf="cust.id">Delete</button>
-<button (click)="createCust(cust)" *ngIf="!cust.id">Create</button>
+<button mat-raised-button color="primary" (click)="updateCust(cust)" *ngIf="cust.id">Save</button>
+<button mat-raised-button color="primary" (click)="deleteCust(cust)" *ngIf="cust.id">Delete</button>
+<button mat-raised-button color="primary" (click)="createCust(cust)" *ngIf="!cust.id">Create</button>
 
 
+</mat-card>
 </div>
