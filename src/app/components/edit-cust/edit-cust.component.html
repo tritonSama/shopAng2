@@ -1,0 +1,28 @@
+<div *ngIf="cust">
+    <h2>{{cust.firstName}}</h2>
+<div>
+First Name:
+    <input [(ngModel)]="cust.firstName" placeholder="First Name"/>
+</div>
+<div>
+Last Name:
+<input [(ngModel)]="cust.lastName" placeholder="Last Name"/>
+</div>
+<div>
+Email:
+<input [(ngModel)]="cust.email" placeholder="Email"/>
+</div>
+<div>
+Phone Number:
+<input [(ngModel)]="cust.phoneNumber" placeholder="Phone Number"/>
+</div>
+<div>
+Birth Date:
+<input [(ngModel)]="cust.birthDate" placeholder="Birth Date"/>
+</div>
+<button (click)="updateCust(cust)" *ngIf="cust.id">Save</button>
+<button (click)="deleteCust(cust)" *ngIf="cust.id">Delete</button>
+<button (click)="createCust(cust)" *ngIf="!cust.id">Create</button>
+
+
+</div>
