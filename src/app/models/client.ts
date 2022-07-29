@@ -4,6 +4,6 @@ export class Client {
     lastName = "";
     email = "";
     phoneNumber = "";
-    birthDate = "";
+    birthDate = Date;
 
 }

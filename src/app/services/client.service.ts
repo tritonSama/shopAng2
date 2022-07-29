@@ -8,6 +8,9 @@ import { Client } from '../models/client';
   providedIn: 'root'
 })
 export class ClientService {
+  addClient(arg0: Client) {
+    throw new Error('Method not implemented.');
+  }
  private url = "Client"
 
   constructor(private http: HttpClient) { }

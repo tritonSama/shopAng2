@@ -3,7 +3,11 @@
 <div>
     <mat-form-field appearance="fill">
         <mat-label>First Name</mat-label>
-    <input matInput [(ngModel)]="cust.firstName" placeholder="First Name"/>
+    <input matInput required minlength="1" [(ngModel)]="cust.firstName" placeholder="First Name"/>
+    
+    <mat-hint>
+        First name is required
+    </mat-hint>
     </mat-form-field>
 </div>
 <div>
@@ -26,10 +30,17 @@
 
 </div>
 <div>
-    <mat-form-field appearance="fill">
+    <!-- <mat-form-field appearance="fill">
         <mat-label>Birth Date</mat-label>
-    <input matInput [(ngModel)]="cust.birthDate" placeholder="Birthdate"/>
-    </mat-form-field>
+    <input matInput [(ngModel)]="cust.birthDate" placeholder="Birthdate"/> -->
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="birthDate" placeholder="birthDate">
+        <mat-datepicker-toggle matSuffix [for]="birthDate"></mat-datepicker-toggle>
+        <mat-datepicker #birthDate startView="multi-year"></mat-datepicker>
+      </mat-form-field>
+      
+ 
 </div>
 <button mat-raised-button color="primary" (click)="updateCust(cust)" *ngIf="cust.id">Save</button>
 <button mat-raised-button color="primary" (click)="deleteCust(cust)" *ngIf="cust.id">Delete</button>

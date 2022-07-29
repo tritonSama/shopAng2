@@ -12,6 +12,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+import { 
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+  
+} from '@angular/forms';
 
 
 
@@ -32,7 +43,15 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatNativeDateModule,
+    //  FormBuilder,
+    // FormControl,
+    // FormGroup,
+    // Validators
 
 
   ],
