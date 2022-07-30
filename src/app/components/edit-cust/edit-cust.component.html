@@ -35,7 +35,7 @@
     <input matInput [(ngModel)]="cust.birthDate" placeholder="Birthdate"/> -->
 
     <mat-form-field>
-        <input matInput [matDatepicker]="birthDate" placeholder="birthDate">
+        <input matInput [matDatepicker]="birthDate" [(ngModel)]="cust.birthDate" placeholder="birth Day">
         <mat-datepicker-toggle matSuffix [for]="birthDate"></mat-datepicker-toggle>
         <mat-datepicker #birthDate startView="multi-year"></mat-datepicker>
       </mat-form-field>
